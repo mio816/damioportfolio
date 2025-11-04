@@ -1,0 +1,640 @@
+@charset "UTF-8";
+
+/* --------- すべてのページに適用される設定 --------- */
+html {
+    background-color: #FFF;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 17px;
+    color: #000;
+    overflow-x: hidden; 
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+a:link {
+    color: #000;            /*リンクの通常時の色指定*/
+}
+a:visited {
+    color: #000;            /*リンクを押した後の色指定*/
+}
+a:hover {
+    color: #C0C0C0;            /*リンクが当たってるときの色指定*/
+}
+a:active {
+    color: #C0C0C0;            /*リンクを押したときの色指定*/
+}
+
+
+/* --------- すべてのページに適用 --------- ヘッダー */
+header {
+    width: 100%;                 /*body横幅に合わせる*/
+    height: auto;                /*縦幅を自動で合わせる*/
+    /*ヘッダーを固定*/
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff91;
+}
+.logo {
+    margin:30px 0 0 40px;
+}
+.logo img {
+    width: 60%;
+}
+/* --- ナビゲーションメニュー --- */
+.hamburger-nav-list {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin:20px 40px 0 0;
+    gap: 70px;
+    z-index: 1;
+}
+
+
+/* --------- すべてのページに適用 ---------- メイン */
+main {
+    height: auto;                 /*画面縦幅を合わせる*/
+    width: 100%;                  /*body横幅に合わせる*/
+    margin: 100px auto 90px auto;  /*左右中央揃え*/
+}
+
+
+/* --------- すべてのページに適用 --------- フッター */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 30px;
+    height: 10vh;
+    color: #FFF;
+    user-select: none;
+}
+.gotop {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+
+
+/* ----------------- 個別ページ ----------------- */
+/* ------------------- INDEX ------------------- */
+.top-bg {
+    height: 900px;
+}
+.top-main {
+    display: flex;
+    justify-content: center;
+}
+.top-img img {
+    margin: 20% 0 0 20%;
+    width: 1000px;
+    height: 45vh;
+    object-fit: cover;
+    z-index: 0;
+}
+.top-img {
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%,100% {
+    opacity: 1;
+  }
+}
+.title {
+    font-size: 7rem;
+    font-weight: 2000;
+    color: #3b3b3ba1;
+    white-space: nowrap;
+    z-index: 999;
+}
+.title2 {
+    font-size: 3rem;
+    color: #3b3b3ba1;
+    white-space: nowrap;
+    z-index: 1;
+}
+.top-mg {
+    user-select: none;
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    z-index: 1;
+}
+
+.Welcome {
+    text-align: center;
+    padding: 100px 0 100px 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    user-select: none;
+}
+
+/* ------- BUTTON ------- */
+#submit {
+    text-align: center;            /*ボタンを中央表示*/
+    margin-left: 55%;
+}
+.btn {
+   font-size: 1.5rem;              /*文字サイズ変更*/
+   font-weight: 500;               /*文字の太さ変更*/
+   position: relative;             /*相対位置*/
+   display: inline-block;          /*中央へ配置*/
+   color: #000;               /*文字の色指定*/
+} 
+a.btn-svg {
+   line-height: 54px;              /*ボタン内文字中央へ*/
+   width: 204px;                   /*図のライン横幅指定*/
+   height: 54px;                   /*図のライン縦幅指定*/
+   cursor: pointer;                /*カーソルポインタの指定*/
+   background-color: transparent;  /*背景を透明に*/
+}
+a.btn-svg svg {                    
+   position: absolute;             /*絶対位置*/
+   top: 0;                         /*上からの配置操作*/
+   left: 0;                        /*左からの配置操作*/
+   width: 100%;                    /*ボタン反応範囲収める*/
+   height: 100%;                   /*ボタン反応範囲収める*/
+}
+a.btn-svg svg rect {               
+   -webkit-transition: all 400ms ease;
+   transition: all 400ms ease;     /*アニメーションの速度操作*/
+   stroke-width: 1.5;              /*図の線幅指定*/
+   stroke-dasharray: 200px, 16px;  /*図の破線の間隔指定*/
+   stroke-dashoffset: 70px;        /*図の破線の位置指定*/
+   stroke: #000;              /*図の色指定*/
+}
+a.btn-svg:hover svg rect {
+   stroke-dashoffset: 284px;       /*アニメーションの動作範囲*/
+}
+
+/* ----- About・Work項目 ----- */
+.space {
+    font-size: 7rem;
+    font-weight: 2000;
+    color: #3b3b3ba1;
+    white-space: nowrap;
+    z-index: 1;
+    margin-left: 10%;
+    user-select: none;
+}
+
+
+
+/* ------------------- ABOUT ------------------- */
+/* ------------------ PROFILE ------------------ */
+.about {
+    width: 100%;                   /*main横幅に合わせる*/
+    margin: 50px 0 100px 0;
+}
+.title3 {
+    width: 95%;
+    font-size: 1.5rem;
+    text-align: right;
+    letter-spacing: 10px;
+    margin-bottom: 70px;
+    border-top:5px solid #3b3b3ba1;
+    color: #3b3b3ba1;
+    user-select: none;
+}
+.profile-word {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    width: 900px;
+    user-select: none;
+    border-left: 2.5px solid #000;
+    padding-left:60px;
+}
+.title4 {
+    font-size: 2.3rem;
+}
+.name1 {
+    letter-spacing: 5px;
+}
+.name2 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.profile-main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.8;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    padding-top: 110px;
+    gap:100px;
+    margin: 0 auto;
+}
+.profile-main table {
+    width: 400px;
+    user-select: none;
+}
+.icon img {
+    width: 400px;
+}
+.icon {
+    text-align: center;
+}
+.top {
+    vertical-align: top;
+}
+
+/* ------------------ SKILL ------------------ */
+.skill {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.8;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    padding-top: 110px;
+    gap:120px;
+    margin: 0 auto;
+    user-select: none;
+}
+.skill img {
+    width:220px;
+    text-align: center;
+}
+.skill-img {
+    text-align: center;
+}
+.skill td {
+    padding: 15px;
+}
+.skill table {
+    width: 450px;
+}
+.name3 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    border-bottom: 1px solid #000;
+}
+
+
+/* ------------- WORK ------------- */
+.work {
+    width: 100%;                   /*main横幅に合わせる*/
+    display: flex;                 /*並ばせる*/
+    justify-content: center;       /*中央に配置*/
+    margin: 50px 0 100px 0;
+}
+.work a h4{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+.title-right {
+    text-align: right;
+}
+.title-left {
+    text-align: left;
+}
+.work p {
+    font-size: 0.8rem;
+    font-family: 'Klee One', cursive;
+    user-select: none;
+}
+.work table {
+    width: 80%;
+}
+.work td {
+    text-align: center;
+    padding: 20px 0;
+    width: 40%;
+}
+.work img {
+    width:  60%;
+    opacity:0.8;
+    border:1px solid #000
+}
+.work a:hover img {
+    border:1px solid #FFF
+}
+
+
+/* ------ WORK Webdesignページ ------ */
+.website-img {
+    background-color: #C0C0C0;
+    padding: 30px;
+    width: 800px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap:60px;
+    margin: 0 auto;
+}
+.moble img {
+    padding-top: 50%;
+}
+.title5 {
+    font-size: 1.5rem;
+}
+.concept {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    gap: 80px;
+    user-select: none;
+}
+.concept2 {
+    width: 400px;
+}
+.website-word {
+    margin: 0 auto;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    width: 500px;
+    user-select: none;
+    border-left: 2.5px solid #000;
+    padding-left:70px;
+    letter-spacing: 2.5px;
+}
+.website-capcha p {
+    width: 800px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin: 0 auto;
+    user-select: none;
+}
+.capcha {
+    width: 800px;
+    margin: 0 auto;
+}
+.capcha p {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    user-select: none;
+}
+.website {
+    text-align: center;
+}
+/* ------- BUTTON ------- */
+#submit2 {
+    text-align: center;            
+    margin-right: -35%;
+}
+
+
+
+/* -- Graphic design・Illustページ -- */
+.design-img {
+    background-color: #C0C0C0;
+    padding: 30px;
+    width: 680px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap:60px;
+    margin: 0 auto;
+}
+
+
+
+/* ----------------- モバイル対応 1000px----------------- */
+@media(max-width: 1000px) {
+    .title {
+        font-size: 6rem;
+    }
+    .profile-word {
+        font-size: 1rem;
+        width: 750px;
+        padding-left:60px;
+    }
+    .title4 {
+        font-size: 2rem;
+    }
+    .profile-main {
+        gap: 50px;
+    }
+    .skill {
+        gap: 50px;
+    }
+    .concept {
+        gap: 50px;
+    }
+    .work img {
+        width:  90%;
+    }
+    .website-img {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        gap:30px;
+        margin: 0 auto;
+    }
+    .design-img {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        gap:30px;
+        margin: 0 auto;
+    }
+    .website-capcha p, .capcha {
+        width: 80%;
+    }
+    .website-word {
+        padding-left:50px;
+    }
+    #submit2 {
+        margin-right: -45%;
+    }
+    .work a h4{
+        font-size: 1.3rem;
+    }
+}
+
+
+/* ----------------- モバイル対応 767px----------------- */
+@media(max-width: 767px) {
+    header {
+        height: 85px;
+    }
+    .hamburger-nav-list {
+        font-size: 1rem;
+        font-weight: 800;
+        margin:20px 30px 0 0;
+        gap: 35px;
+    }
+    .logo {
+        margin:30px 0 0 30px;
+    }
+    .logo img {
+        width: 45%;
+    }
+    .honda {
+        font-size: 6.5rem;
+    }
+    .top-img img {
+        margin: 19% 0 0 0;
+        height: 45vh;
+    }
+    .title {
+        font-size: 3.5rem;
+    }
+    .title2 {
+        font-size: 2rem;
+    }
+    .top-mg {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+    .profile-word {
+        width: 90%;
+        padding-left:40px;
+    }
+    .title4 {
+        font-size: 1.7rem;
+    }
+    .title5 {
+        font-size: 1.3rem;
+    }
+    .profile-main {
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .profile-main table {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .icon {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .skill {
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .skill table {
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+    .concept {
+        display: block;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .concept2{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .work img {
+        width:  90%;
+    }
+    .work a h4{
+        font-size: 1.1rem;
+    }
+    .space {
+        font-size: 5rem;
+    }
+    .website-word {
+        width: 350px;
+        padding-left:25px;
+    }
+    .Welcome {
+        padding: 100px 0 80px 0;
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+}
+
+/* ----------------- モバイル対応 400px----------------- */
+@media(max-width: 500px) {
+    header {
+        height: 75px;
+    }
+    .hamburger-nav-list {
+        font-size: 1rem;
+        margin:15px 30px 0 0;
+        gap: 20px;
+    }
+    .top-img img {
+        margin: 25% 0 0 0;
+    }
+    .title {
+        font-size: 2.8rem;
+        padding-top: 25px;
+    }
+    .title2 {
+        font-size: 1.5rem;
+    }
+    .top-mg {
+        position: absolute;
+        top: 17%;
+        left: 5%;
+    }
+    .profile-word {
+        width: 85%;
+        padding-left:25px;
+    }
+    .title4 {
+        font-size: 1.4rem;
+    }
+    .title5 {
+        font-size: 1.2rem;
+    }
+    .website-word {
+        width: 300px;
+        padding-left:25px;
+    }
+    #submit {
+        margin-left: 0%;
+    }
+    .btn {
+       font-size: 1.2rem;              /*文字サイズ変更*/
+       font-weight: 500;               /*文字の太さ変更*/
+       position: relative;             /*相対位置*/
+       display: inline-block;          /*中央へ配置*/
+       color: #000;               /*文字の色指定*/
+    } 
+    .Welcome {
+        padding: 50px 0 50px 0;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    .skill img {
+        width: 80%;
+    }
+    .skill table {
+        width: 85%;
+    }
+    .profile-main table {
+        width: 85%;
+    }
+    .icon img {
+        width: 85%;
+    }
+    #submit2 {         
+        margin-right: 0%;
+    }
+    .top-bg {
+        height: 700px;
+    }
+    .work table {
+        width: 85%;
+    }
+}
+
