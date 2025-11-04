@@ -1,0 +1,11 @@
+サイトURL
+https://mio816.github.io/damioportfolio/
+
+
+ソースコードを変更したらこれを上から順に実行する。
+自動でサイトに適用される。
+cd C:\Users\mio\Desktop\ポートフォリオまとめ\自分のポートフォリオ\ポートフォリオ_new
+git add .
+git commit -m "コミット"
+git branch -M main
+git push -u origin main
